@@ -72,3 +72,5 @@ const shoppingcart=[
 const pricetopy=shoppingcart.reduce((acc,item)=>acc+item.price
 ,0)
 console.log(pricetopy)
+
+//Output 15996
