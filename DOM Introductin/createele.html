@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create element</title>
+</head>
+<body style="background-color: black; color: red;">
+    <div class="parent" >
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Fruday</div>
+    </div>
+</body>
+<script>
+    const classess=document.querySelector('.parent')
+    console.log(classess.children)
+    console.log(classess.children[1].innerHTML);
+
+    for(let i=0;i<classess.children.length;i++){
+       console.log(classess.children[i].innerHTML);
+
+
+    }
+
+    console.log(classess.firstElementChild);
+    const day=document.querySelector('.day')
+    console.log(day)
+    console.log(day.parentElement) //monday
+    console.log(day.nextElementSibling) //tuesday
+
+
+    //creation of an element
+
+    const div=document.createElement('div')
+    console.log(div)
+    div.className="divclass"
+    div.id=Math.random()
+    div.setAttribute("title","generatedtitle")
+    div.style.backgroundColor="green"
+    // div.innerHTML="Gaurav Shah"
+    const addtext=document.createTextNode("Gaurav Shha")
+    div.appendChild(addtext)
+    document.body.appendChild(div)
+    
+</script>
+</html>
